@@ -1,17 +1,26 @@
 ![title](/frontend/src/assets/title.png)
 
-ArXtract is a research intelligence engine that transforms any arXiv paper into structured, queryable insights. It evaluates a paper’s relevance to your research interests, highlights its most important contributions, surfaces related work, and lets you interrogate the paper all through a terminal-style interface.
+**Future Updates**
 
-**Try it Out!** [arxtract-cxc.vercel.app](https://arxtract-cxc.vercel.app)
+- Allow users to login so the data is persistent
+- Allow users to enter multiple arXiv papers and then select which ones they want to query from
+- Chunks stores in Postgres database keyed on user ID and paper ID
+
+
+## About
+
+ArXtract is a research intelligence engine that transforms any arXiv paper into structured, queryable insights. It evaluates a paper’s relevance to your research interests, highlights its most important contributions, searches for related work, and lets you interrogate the paper.
+
+**Try it out at:** [arxtract-cxc.vercel.app](https://arxtract-cxc.vercel.app)
 
 ---
 ![Key Features](/frontend/src/assets/key_features.png)
 
 ## What It Does
 
-**Paste an arXiv link. Enter your research interests. Get everything you need.**
+As input, ArXtract expects an arXiv link and the user's research interests.
 
-* **Key Sections:** Extracts title, problem statement, contribution, architecture, datasets, metrics, baselines, results, limitations, etc. into structured fields.
+* **Key Sections:** Extracts title, problem statement, contribution, architecture, datasets, metrics, baselines, results, limitations into structured fields.
 * **Relevance Scoring:** By entering your research topic, you get a 0–100 relevance score with the papers abtract and the top 5 most relevant text chunks.
 * **Related Papers:** Discovers and ranks similar papers from arXiv based on your research interest by cosine similarity.
 * **Research Query:** Ask follow-up questions about the paper and get context-constrained answers.
@@ -22,16 +31,9 @@ ArXtract is a research intelligence engine that transforms any arXiv paper into 
 
 | Layer | Tech |
 |-------|------|
-| Frontend | React 19, TypeScript, Vite (Rolldown) |
-| Styling | Custom CSS, macOS terminal-inspired aesthetic |
-| Charts | Mermaid.js, custom bar/gauge components |
-| Particles | tsParticles |
-| Backend | FastAPI, Python |
+| Frontend | React, TypeScript, Vite |
+| Backend | Python FastAPI |
 | LLM | OpenAI GPT-o4 |
-| Embeddings | text-embedding-3-small |
-| PDF Parsing | PyMuPDF |
-| Vector Math | NumPy (cosine similarity) |
-| Deployment | Vercel |
 
 ## Project Structure
 
